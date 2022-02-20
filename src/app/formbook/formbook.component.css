@@ -1,0 +1,11 @@
+.error {color:#FFFFFF; background-color:red;padding:10px;
+        font-family: "Lucida Console", "Courier New", monospace;}
+
+button {cursor:pointer;}
+button:disabled {cursor:not-allowed;}
+
+hr {margin-top:2em;}
+
+hr ~ p a,hr ~ p a:visited {text-decoration:none;color:white}
+
+hr ~ a:hover {text-decoration:underline;color:yellow;}

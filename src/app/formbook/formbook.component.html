@@ -1,0 +1,33 @@
+<h3>Compila:</h3>
+
+<form [formGroup]="myFormBook">
+  <div>
+    <label for="txtNome">Nome</label>
+    <input type="text" id="txtNome" formControlName="txtNome" maxlength="{{maxcharname}}" size = "{{maxcharname}}">
+    <span class="error" [hidden]="myFormBook.controls.txtNome.errors == null || !myFormBook.controls.txtNome.errors.maxlength">Il nome non può superare i {{maxcharname}} caratteri</span>
+  </div>
+  <div>
+    <label for="txtEmail">E-mail</label>
+    <input type="text" formControlName="txtEmail" maxlength="{{maxcharemail}}" size = "{{maxcharemail}}">
+    <p>
+      <span class="error" [hidden]="!myFormBook.controls.txtEmail.touched ||myFormBook.controls.txtEmail.errors == null || !myFormBook.controls.txtEmail.errors.pattern">Email non valida</span>
+      <span class="error" [hidden]="myFormBook.controls.txtEmail.errors == null || !myFormBook.controls.txtEmail.errors.maxlength">L'email non può superare i {{maxcharemail}} caratteri</span>
+    </p>
+  </div>
+  <div>
+    <label for="txtTesto">Messaggio di saluto</label>
+    <textarea formControlName="txtTesto"></textarea>
+    <p>
+     <span class="error" [hidden]="myFormBook.controls.txtTesto.errors == null || !myFormBook.controls.txtTesto.errors.maxlength">Massimo {{maxchartext}} caratteri</span>
+    </p>
+  </div>
+  <div class="footer">
+    <button type="button"  (click)="insert()" [disabled]="myFormBook.invalid">Pubblica</button>
+  </div> 
+</form>
+
+<hr width="100%">
+
+<p>Scarica il mio <a href="content/CurriculumVitae.pdf" target="_BLANK">Curriculum vitae</a></p>
+<p>Visita <a href="http://www.ilgilberto.it" target="_BLANK">IlGilberto WEB</a></p>
+

@@ -1,0 +1,12 @@
+h1 {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top:100px;
+}
+
+
+table.layout {width: 95%; table-layout:fixed; overflow: hidden;}
+table.layout tr {vertical-align: top;}
+table.layout tr td.rx {width: 70%; text-align: left;  overflow: hidden;}
+table.layout tr td.lx {width: 30%; text-align: right;  overflow: hidden;}
+
+.clock {font-size:2.5rem;padding-top:2em;}
+FONT.second {font-size:1.8rem};

@@ -1,0 +1,21 @@
+<div class="sign">
+  <span class="sign__word">Benvenuti</span>
+  <span class="sign__word">in gilberto.info</span>
+  <span class="sign__word clock">{{clock}} <FONT class="second">{{second}}</FONT></span>
+</div>
+
+<h1>
+  {{title}}
+</h1>
+
+<table class="layout">
+
+ <tr>
+   <td class="rx"><guestbook [greetings]="mylist" (changed)="guestBookSearchChange($event)"></guestbook></td>
+   <td class="lx"><formbook (submit)="addGreeting($event)"></formbook></td>
+ </tr>
+
+</table>
+
+
+

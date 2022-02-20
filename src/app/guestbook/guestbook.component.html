@@ -1,0 +1,39 @@
+<h3>SALUTI DEI VISITATORI:</h3>
+
+<div *ngIf="greetings">
+
+ <form [formGroup]="searchForm">
+   <div>
+     <label for="txtMessage">Filtra:</label>
+     <input type="text" formControlName="txtMessage">
+   </div>
+ </form>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th width="5%"></th>
+        <th width="70%"></th>
+        <th width="25%"></th>
+      </tr>
+    </thead>
+    <tbody>
+     <ng-container *ngFor="let greeting of greetings; let i = index">
+     <tr class="title">
+       <td>#{{i}}</td>
+       <td>{{greeting.name}} (<i>{{greeting.email}}</i>)</td>
+       <td>{{greeting.timestamp | date:'HH:mm:ss dd/MM/yyyy'}}</td>
+     </tr>
+     <tr class="content">
+       <td colspan="3">{{greeting.message | forcewrap:80}}</td>
+     </tr>
+     </ng-container>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="nonCiSonoSaluti">
+  <h2>Non ci sono ancora saluti, saluta tu per primo !</h2>
+</div>
+
